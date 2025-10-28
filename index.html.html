@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Portafolio Sol</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+</head>
+<style>
+.uno {
+  border-radius: 50%;
+}
+</style>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light background-color nav">
+        <div class="container-fluid">
+            <a class="navbar-brand animate__animated animate__bounce" href="#">Sol</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#" onclick="mostrarSeccion('info')">Información</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" onclick="mostrarSeccion('proyectos')">Proyectos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" onclick="mostrarSeccion('hobbies')">Hobbies</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" onclick="mostrarSeccion('contactos')">Contactos</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div id="info" class="container my-5">
+        <div class="d-flex justify-content-center align-items-center min-vh-100">
+            <div class="card mb-3" style="max-width: 540px;">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                        <img src="erem.jpg"
+                            class="img-fluid rounded-start" alt="Foto de Sol">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">Sol </h5>
+                            <p class="card-text">Este es un portafolio sobre mí y mis proyectos, tengo experiencia 
+                              en proyectos colegiales, en el área de informática y robótica, algunos de mis proyectos se llaman
+                              KokueBot y OfferCenter, uno es una aplicación móvil y el otro es un robot-semiautonomo,
+                              ambos requieren de conocimientos en programación web. </p>
+                            <p class="card-text"><small class="text-muted">solsolecito</small></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer class="bg-light text-center py-3">
+            <p>&copy; Se reservan los derechos de autor.</p>
+        </footer>
+    </div>
+    <div id="proyectos" class="container my-5 d-none">
+        <div class="text-center">
+            <img src="erem.jpg" class="uno">
+            <h1 class="mt-3">Sol</h1>
+            <h4 class="text-muted">Estudiante</h4>
+        </div>
+        <div class="mt-4">
+            <p>
+               Este es un portafolio sobre mí y mis proyectos, tengo experiencia 
+              en proyectos colegiales, en el área de informática y robótica, algunos de mis proyectos se llaman
+              KokueBot y OfferCenter, uno es una aplicación móvil y el otro es un robot-semiautonomo,
+              ambos requieren de conocimientos en programación web. 
+            </p>
+            <h5>Estudios y proyectos principales</h5>
+            <ul>
+                <li>Estudios en el colegio Bautista de Encarnación</li>
+                <li>Conocimiento en programación</li>
+                <li>Estudiante de 2do Año en el BTI</li>
+            </ul>
+            <h5>Áreas de interés</h5>
+            <p>Programación, lenguajes</p>
+        </div>
+        <footer class="bg-light text-center py-3 mt-5">
+            <p>&copy; Derechos reservados.</p>
+        </footer>
+    </div>
+    <div id="hobbies" class="container my-5 d-none">
+        <div class="text-center">
+            <h2>Mis Hobbies</h2>
+            <p class="mt-3">Algunos de mis hobbies son:</p>
+            <ul class="list-group">
+                <li class="list-group-item"> Ver series</li>
+                <li class="list-group-item"> Escuchar música</li>
+                <li class="list-group-item">Salir a caminar</li>
+                <li class="list-group-item">Dibujar</li>
+            </ul>
+        </div>
+    </div>
+    <div id="contactos" class="container my-5 d-none">
+        <div class="text-center">
+            <h2>Contacto</h2>
+            <p class="mt-3">Puedes comunicarte conmigo a través de:</p>
+            <p>kk <a href="mailto:solgonzalez@email.com">solgonzalez@email.com</a></p>
+            <p>kk <a href="https://www.instagram.com/" target="_blank">Instagram</a> | 
+               <a href="https://facebook.com/" target="_blank">Facebook</a></p>
+        </div>
+    </div>
+    <div class="mt-4">
+          <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Email</label>
+            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Coloca tu email aquí">
+          </div>
+          <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Nombre</label>
+            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Pon tu nombre aquí">
+          </div>
+          <div class="mb-3">
+            <label for="exampleFormControlTextarea1" class="form-label">Escribe aquí...</label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+          </div>
+        </div>
+
+    <script>
+        function mostrarSeccion(id) {
+            document.querySelectorAll("div.container.my-5").forEach(div => div.classList.add("d-none"));
+            document.getElementById(id).classList.remove("d-none");
+        }
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        crossorigin="anonymous"></script>
+</body>
+</html>
+
